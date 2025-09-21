@@ -6,7 +6,12 @@ def google_search(query, num_results=3):
     
     url = "https://www.googleapis.com/customsearch/v1"
     
-    trusted_sites = [ "https://aninews.in/"]
+    trusted_sites = [ 
+        "https://aninews.in/",
+        "https://www.hindustantimes.com/", 
+        "https://indianexpress.com/"
+    ]
+    
     site_query = " OR ".join([f"site:{site}" for site in trusted_sites])
 
     params = {
