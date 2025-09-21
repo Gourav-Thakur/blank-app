@@ -11,13 +11,13 @@ def google_search(query, num_results=3):
         "https://www.hindustantimes.com/", 
         "https://indianexpress.com/"
     ]
-    
+
     site_query = " OR ".join([f"site:{site}" for site in trusted_sites])
 
     params = {
         'key': API_KEY,
         'cx': SEARCH_ENGINE_ID,
-        'q': f"{query} {site_query}",
+        'q': f"{query}",
         'num': num_results
     }
     
